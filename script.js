@@ -61,3 +61,10 @@ function displayProfiles() {
 
 var fullName = profile.lastName + "," + person.firstName;
 var yearBorn = getYearBorn(person.age);
+
+ var educationHTML = "";
+       person.education.forEach(function(school, index) {
+           var schoolNumber = index + 1;
+           educationHTML += "<p class='small mb-2'>College " + schoolNumber + ": " + school + "</p>";
+       });
+
