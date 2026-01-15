@@ -45,4 +45,6 @@ var MichealJordan = {
 	wiki: "https://en.wikipedia.org/wiki/micheal_jordan"
 };
 
+var profiles = [theranos, elonMusk, MichealJordan];
+
 
