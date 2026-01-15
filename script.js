@@ -59,3 +59,5 @@ function displayProfiles() {
 	profiles.forEach(function (profile) {})
 }
 
+var fullName = profile.lastName + "," + person.firstName;
+var yearBorn = getYearBorn(person.age);
