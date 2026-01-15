@@ -103,5 +103,8 @@ var additionalHTML = "";
        container.innerHTML += cardHTML;
    });
 }
+document.addEventListener("DOMContentLoaded", displayProfiles);
+
+
 
 
