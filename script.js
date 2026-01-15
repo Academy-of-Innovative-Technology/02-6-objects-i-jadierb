@@ -52,3 +52,10 @@ function getYearBorn(age) {
 	return currentYear - age;
 }
 
+function displayProfiles() {
+	var container = document.getElementById("profile-container");
+	container.innerHTML = "";
+
+	profiles.forEach(function (profile) {})
+}
+
