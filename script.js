@@ -59,12 +59,51 @@ function displayProfiles() {
 	profiles.forEach(function (profile) {})
 }
 
-var fullName = profile.lastName + "," + person.firstName;
-var yearBorn = getYearBorn(person.age);
+var fullName = profile.lastName + "," + profile.firstName;
+var yearBorn = getYearBorn(profile.age);
 
  var educationHTML = "";
        person.education.forEach(function(school, index) {
            var schoolNumber = index + 1;
            educationHTML += "<p class='small mb-2'>College " + schoolNumber + ": " + school + "</p>";
        });
+
+var additionalHTML = "";
+       if(person.occupation) {
+           additionalHTML += "<p class='small mb-2'><strong>Occupation:</strong> " + person.occupation + "</p>";
+       }
+       if(person.awards) {
+           additionalHTML += "<p class='small mb-2'><strong>Awards:</strong> " + person.awards.join(", ") + "</p>";
+       }
+       if(person.hometown) {
+           additionalHTML += "<p class='small mb-2'><strong>Hometown:</strong> " + person.hometown + "</p>";
+       }
+      
+       var cardHTML = `
+       <article class="col-12 col-sm-6 col-md-4 col-lg-3">
+           <div class="card h-100 shadow-sm text-center">
+               <img
+                   src="${person.img}"
+                   class="card-img-top"
+                   alt="${fullName}"
+               />
+               <div class="card-body">
+                   <h5 class="card-title">${fullName}</h5>
+                   <p class="card-text text-muted">Age: ${person.age}</p>
+                   <p class="card-text text-muted">Year Born: ${yearBorn}</p>
+                   <p class="small">- Education -</p>
+                   ${educationHTML}
+                   ${additionalHTML}
+               </div>
+               <div class="card-footer bg-white">
+                   <a href="${person.wiki}" class="btn btn-outline-primary btn-sm" target="_blank">View Profile</a>
+               </div>
+           </div>
+       </article>
+       `;
+      
+       container.innerHTML += cardHTML;
+   });
+}
+
 
