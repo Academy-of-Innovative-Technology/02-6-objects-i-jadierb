@@ -47,4 +47,8 @@ var MichealJordan = {
 
 var profiles = [theranos, elonMusk, MichealJordan];
 
+function getYearBorn(age) {
+	var currentYear = new Date().getFullYear();
+	return currentYear - age;
+}
 
