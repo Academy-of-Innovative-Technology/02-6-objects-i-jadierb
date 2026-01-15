@@ -15,5 +15,14 @@ education: [
 var elonMusk = {
 	firstName: "Elon",
 	middleName: "Reeve",
-	
-}
+	lastName: "Musk",
+    age: 53,
+	education: [
+	 "Queens College",
+	 "Stanford University",
+	 "Wharton School of the University of Pennslvaina"
+	]
+	img:
+	"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/220px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
+	wiki: "https://en.wikipedia.org/wiki/Elon_Musk"
+};
