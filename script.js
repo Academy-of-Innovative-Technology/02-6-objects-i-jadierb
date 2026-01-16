@@ -1,7 +1,7 @@
 var theranos = {
 
-	firstname: "Elizabeth Holmes",
-	lastname: "Holmes",
+	firstName: "Elizabeth Holmes",
+	lastName: "Holmes",
 	age: 40,
 
 
@@ -37,12 +37,12 @@ var MichealJordan = {
 		"University of North Carolina at Chapel Hill"
 
 	],
-	occupaction: "basketball player",
+	occupation: "basketball player",
 	awards: ["6x NBA champion", "5x NBA most valuable player", "14x NBA All-star"],
 	hometown: "Brooklyn, New York City",
 	img:
 	"https://people.com/thmb/fBzOWOOX7IoYdaQePshE8109tlg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/Michael-Jordan-attends-the-13th-annual-Michael-Jordan-Celebrity-Invitational-gala-051225-d72a742c85c34985b8e731d39ebe5717.jpg",
-	wiki: "https://en.wikipedia.org/wiki/micheal_jordan"
+	wiki: "https://en.wikipedia.org/wiki/Michael_Jordan"
 };
 
 var profiles = [theranos, elonMusk, MichealJordan];
@@ -68,13 +68,13 @@ function displayProfiles() {
 
 var additionalHTML = "";
        if(profile.occupation) {
-           additionalHTML += "<p class='small mb-2'><strong>Occupation:</strong> " + person.occupation + "</p>";
+           additionalHTML += "<p class='small mb-2'><strong>Occupation:</strong> " + profile.occupation + "</p>";
        }
        if(profile.awards) {
-           additionalHTML += "<p class='small mb-2'><strong>Awards:</strong> " + person.awards.join(", ") + "</p>";
+           additionalHTML += "<p class='small mb-2'><strong>Awards:</strong> " + profile.awards.join(", ") + "</p>";
        }
        if(profile.hometown) {
-           additionalHTML += "<p class='small mb-2'><strong>Hometown:</strong> " + person.hometown + "</p>";
+           additionalHTML += "<p class='small mb-2'><strong>Hometown:</strong> " + profile.hometown + "</p>";
        }
       
        var cardHTML = `
